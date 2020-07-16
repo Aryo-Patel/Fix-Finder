@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0f8380b9.chunk.css",
+    "main.js": "/static/js/main.aac735ce.chunk.js",
+    "main.js.map": "/static/js/main.aac735ce.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/js/2.e9d5df4e.chunk.js": "/static/js/2.e9d5df4e.chunk.js",
+    "static/js/2.e9d5df4e.chunk.js.map": "/static/js/2.e9d5df4e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.33ae07d96e6ff31cdaf4c9337ea71a61.js": "/precache-manifest.33ae07d96e6ff31cdaf4c9337ea71a61.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0f8380b9.chunk.css.map": "/static/css/main.0f8380b9.chunk.css.map",
+    "static/js/2.e9d5df4e.chunk.js.LICENSE.txt": "/static/js/2.e9d5df4e.chunk.js.LICENSE.txt",
+    "static/media/AnimationLibrary.PNG": "/static/media/AnimationLibrary.333e7274.PNG",
+    "static/media/styles.css": "/static/media/FixFinder 48px.1398afa0.ico"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/js/2.e9d5df4e.chunk.js",
+    "static/css/main.0f8380b9.chunk.css",
+    "static/js/main.aac735ce.chunk.js"
+  ]
+}
