@@ -2,10 +2,10 @@ const express = require('express');
 const upload = require('express-fileupload');
 const fs = require('fs');
 const app = express();
-
+const path = require('path');
 app.use(upload());
 app.use(express.json({ extended: false }));
-const PORT = process.env.PORT || 5000;
+
 /*
 var dir = './'; // your directory
 
@@ -32,7 +32,7 @@ app.get('/login/:id', (req, res) => {
 })
 app.post('/imagesDel', (req, res) => {
     let imageName = req.body.imageName;
-    fs.unlinkSync('./client/src/content/' + imageName);
+    fs.unlinkSync('./client/public/content/' + imageName);
     return res.status(200);
 })
 app.post('/images', (req, res) => {
@@ -40,7 +40,7 @@ app.post('/images', (req, res) => {
         let file = req.files.file;
         let fileName = req.files.file.name;
 
-        file.mv('./client/src/content/' + fileName, err => {
+        file.mv('./client/public/content/' + fileName, err => {
             if (err && err !== undefined) {
                 console.log(err);
             }
@@ -52,7 +52,7 @@ app.post('/images', (req, res) => {
     res.status(200).redirect('/');
 });
 function sortDir() {
-    var dir = __dirname + '/client/src/content/'; // your directory
+    var dir = __dirname + '/client/public/content/'; // your directory
 
     var files = fs.readdirSync(dir);
     files.sort(function (a, b) {
@@ -62,6 +62,23 @@ function sortDir() {
     return files.reverse();
 }
 
+app.use(express.static('client/build'));
+app.use(express.static('client/public'));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
+
+if (process.env.NODE_ENV === 'production') {
+    //SET STATIC FOLDER
+    app.use(express.static('client/build'));
+    app.use(express.static('client/public'));
+
+    app.get('*', (req, res, next) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+}
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log('connected to port ' + PORT);
 });
