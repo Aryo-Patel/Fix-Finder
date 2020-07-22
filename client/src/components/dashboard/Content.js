@@ -14,13 +14,15 @@ const Content = (props) => {
     }, [])
     let i = 0;
     let imageExtensions = ['JPEG', 'JPG', 'PNG', 'GIF', 'TIFF', 'PSD', 'PDF', 'AI', 'EPS'];
+    let baseRoute = 'https://fix-finder-file-container.s3.amazonaws.com/';
     return (
         <ul>
             {imageNames.map((imageName) => {
+                console.log(baseRoute + imageName);
                 if (imageExtensions.indexOf(imageName.substring(imageName.length - 3)) !== -1) {
                     return (
                         <li key={i++}>
-                            <img key={i++} src={window.location.origin + '/content/' + imageName} />
+                            <img key={i++} src={baseRoute + imageName} />
                         </li>
                     )
                 }
@@ -28,9 +30,9 @@ const Content = (props) => {
                     return (
                         <li key={i++}>
                             <video key={i++} width="320px" height="240px" controls>
-                                <source src={window.location.origin + '/content/' + imageName} type="video/mp4" />
-                                <source src={window.location.origin + '/content/' + imageName} type="video/ogg" />
-                                <source src={window.location.origin + '/content/' + imageName} type="video/webm" />
+                                <source src={baseRoute + imageName} type="video/mp4" />
+                                <source src={baseRoute + imageName} type="video/ogg" />
+                                <source src={baseRoute + imageName} type="video/webm" />
                             </video>
                         </li>
                     )

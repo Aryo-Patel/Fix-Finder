@@ -172,6 +172,10 @@ body #body #content-wrapper #imgs ul li video {
   padding: 20px 0;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 #modal-div {
   position: absolute;
   z-index: 50;

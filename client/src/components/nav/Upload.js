@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 const Upload = props => {
     const [imageNames, updateImageNames] = useState([]);
+
     useEffect(() => {
         async function getImages() {
             let images = await axios.get('/image-names');
@@ -41,6 +42,7 @@ const Upload = props => {
     }
     function removeImage(e) {
         let fileName = e.target.textContent;
+        e.target.classList.add('strike');
         const config = {
             headers: {
                 'Content-Type': 'application/json'

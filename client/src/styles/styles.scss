@@ -118,7 +118,9 @@ body {
     }
   }
 }
-
+.strike {
+  text-decoration: line-through;
+}
 #modal-div {
   position: absolute;
   z-index: 50;
