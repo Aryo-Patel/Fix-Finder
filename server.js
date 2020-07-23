@@ -4,13 +4,16 @@ const fs = require('fs');
 const app = express();
 const path = require('path');
 const cors = require('cors');
+const config = require('config');
 app.use(upload());
 app.use(cors());
 app.use(express.json({ extended: false }));
 
 const AWS = require('aws-sdk');
-const ID = 'AKIAIMFG6WL5XWKEBL5Q';
-const SECRET = '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';
+const ID = config.get('Access-Key-ID');
+const SECRET = config.get('Secret-Access-Key');
+
+
 const BUCKET_NAME = 'fix-finder-file-container';
 let baseRoute = 'https://fix-finder-file-container.s3.amazonaws.com/';
 
