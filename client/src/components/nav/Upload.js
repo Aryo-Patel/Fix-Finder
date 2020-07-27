@@ -19,7 +19,7 @@ const Upload = props => {
     const [loggedIn, changeStatus] = useState(false);
     props.displayStatus ? displayText = 'block' : displayText = 'none';
 
-
+    window.scrollTo(0, 0);
     async function checkSubmit() {
         let passwd = document.getElementById('password').value;
 

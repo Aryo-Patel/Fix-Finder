@@ -104,6 +104,12 @@ app.post('/images', (req, res) => {
             Key: fileName,
             Body: file.data
         }
+        // console.log(file.data);
+        // let request = s3.putObject(params);
+        // request.on('httpUploadProgress', function (progress) {
+        //     console.log(progress.loaded + ' of ' + progress.total + ' bytes');
+        // });
+        // request.send();
         s3.upload(params, (err, data) => {
             if (err) {
                 console.log(err);
@@ -125,12 +131,12 @@ function sortDir() {
     return files.reverse();
 }
 
-app.use(express.static('client/build'));
-app.use(express.static('client/public'));
+// app.use(express.static('client/build'));
+// app.use(express.static('client/public'));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
 
 if (process.env.NODE_ENV === 'production') {
     //SET STATIC FOLDER

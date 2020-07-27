@@ -29,7 +29,7 @@ const Content = (props) => {
                 else {
                     return (
                         <li key={i++}>
-                            <video key={i++} width="320px" height="240px" controls>
+                            <video key={i++} controls>
                                 <source src={baseRoute + imageName} type="video/mp4" />
                                 <source src={baseRoute + imageName} type="video/ogg" />
                                 <source src={baseRoute + imageName} type="video/webm" />

@@ -106,6 +106,7 @@ body nav #links-wrapper .link-item {
   transition: 0.2s;
   -webkit-transform: scale(1);
           transform: scale(1);
+  text-align: center;
 }
 
 html nav #links-wrapper .link-item:hover,
@@ -148,7 +149,14 @@ body #body #content-wrapper #welcome {
 
 html #body #content-wrapper #welcome h1,
 body #body #content-wrapper #welcome h1 {
+  font-size: 1.8em;
   margin-bottom: 5px;
+}
+
+html #body #content-wrapper #imgs h1,
+body #body #content-wrapper #imgs h1 {
+  font-size: 1.8em;
+  margin: 20px;
 }
 
 html #body #content-wrapper #imgs ul li,
@@ -160,14 +168,14 @@ body #body #content-wrapper #imgs ul li {
 
 html #body #content-wrapper #imgs ul li img,
 body #body #content-wrapper #imgs ul li img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   padding: 20px 0;
 }
 
 html #body #content-wrapper #imgs ul li video,
 body #body #content-wrapper #imgs ul li video {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   padding: 20px 0;
 }

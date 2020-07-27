@@ -66,6 +66,7 @@ body {
         text-decoration: none;
         transition: 0.2s;
         transform: scale(1);
+        text-align: center;
         &:hover {
           cursor: pointer;
           transition: 0.4s;
@@ -93,22 +94,27 @@ body {
         margin-top: 25px;
         text-align: center;
         h1 {
+          font-size: 1.8em;
           margin-bottom: 5px;
         }
       }
       #imgs {
+        h1 {
+          font-size: 1.8em;
+          margin: 20px;
+        }
         ul {
           li {
             list-style-type: none;
             width: 80%;
             margin: 0 auto;
             img {
-              max-width: 80%;
+              max-width: 100%;
               height: auto;
               padding: 20px 0;
             }
             video {
-              max-width: 80%;
+              max-width: 100%;
               height: auto;
               padding: 20px 0;
             }
